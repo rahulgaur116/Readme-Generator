@@ -60,14 +60,7 @@ const questions = [
     },
 ];
 
-// Prompt the user with the defined questions
-inquirer.prompt(questions)
-    .then((answers) => {
-        console.log(answers); // You can handle the user responses here
-    })
-    .catch((error) => {
-        console.log('An error occurred:', error);
-    });
+
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
