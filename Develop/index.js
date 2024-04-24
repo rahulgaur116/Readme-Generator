@@ -79,10 +79,12 @@ function init() {
     inquirer.prompt(questions)
     .then((answers) => {
         // Generate README content based on user responses
-        const readmeContent = `# ${answers.title}\n\nDescription: ${answers.description}\n\nInstallation: ${answers.installation}\n`;
+        const readmeContent = `# ${answers.Title}\n\nDescription: ${answers.Description}\n\nTable of Contents: ${answers['Table of Contents']}\n
+        Installation: ${answers.Installation}\nUsage: ${answers.Usage}\nLicense: ${answers.License}\n
+        Contributions: ${answers.Contributions}\nTests: ${answers.Tests}\nGitHub Username: ${answers['GitHub Username']}\nQuestions: ${answers.Questions}\n`;
 
         // Write README content to a file
-        writeToFile('README.md', readmeContent);
+        writeToFile('SampleREADME.md', readmeContent);
     })
     .catch((error) => {
         console.log('An error occurred:', error);
