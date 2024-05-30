@@ -2,6 +2,25 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 
+// Function to create license badge
+
+function renderLicenseLink(license) {
+    if (license !== 'None') {
+      return `\n* [License](#license)\n`;
+    }
+    return '';
+  }
+  
+  // Create a function that returns the license section of README
+  // If there is no license, return an empty string
+  function renderLicenseSection(license) {
+    if (license !== 'None') {
+      return `## License
+  
+  This project is licensed under the ${license} license.`;
+    }
+    return '';
+  }
 // TODO: Create an array of questions for user input
 
 const questions = [
@@ -15,11 +34,7 @@ const questions = [
         name: 'Description',
         message: 'Provide a description of your project:'
     },
-    {
-        type: 'input',
-        name: 'Table of Contents',
-        message: 'Enter Content Details by Page Number:'
-    },
+
     {
         type: 'input',
         name: 'Installation',
@@ -85,9 +100,41 @@ function init() {
     inquirer.prompt(questions)
     .then((answers) => {
         // Generate README content based on user responses
-        const readmeContent = `# ${answers.Title}\n\nDescription: ${answers.Description}\n\nTable of Contents: ${answers['Table of Contents']}\n
-        Installation: ${answers.Installation}\nUsage: ${answers.Usage}\nLicense: ${answers.License}\n
-        Contributions: ${answers.Contributions}\nTests: ${answers.Tests}\nGitHub Username: ${answers['GitHub Username']}\n\nGitHub Repolink: ${answers['GitHub Repolink']}Questions: ${answers.Questions}\n`;
+        const readmeContent = `# ${answers.Title}
+
+        ## Description: 
+        ${answers.Description}
+
+        ## Table of Contents: 
+    
+        - [Installation](#installation)
+        - [Usage](#usage)
+        - [Credits](#credits)
+        - [License](#license)
+
+        ## Installation: 
+        ${answers.Installation}
+
+        ## Usage: 
+        ${answers.Usage}
+
+        ## License: 
+        ${answers.License}
+
+        ## Contributions: 
+        ${answers.Contributions}
+
+        ## Tests: 
+        ${answers.Tests}
+
+        ## GitHub Username: 
+        ${answers['GitHub Username']}
+
+        ## GitHub Repolink: 
+        ${answers['GitHub Repolink']} 
+
+        ## Questions: 
+        ${answers.Questions}`;
 
         // Write README content to a file
         writeToFile('SampleREADME.md', readmeContent);
