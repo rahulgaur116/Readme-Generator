@@ -6,8 +6,7 @@ This command-line application allows users to generate a README file for their p
 
 ## Screenshots:
 
-<video controls src="Funcionality Video.mp4" title="Title"></video>
-
+<video controls src="images/Funcionality Video.mp4" title="Title"></video>
 
 
 ## Table of Contents
