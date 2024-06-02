@@ -1,32 +1,32 @@
 README Generator
 
-Description
+## Description
 
 This command-line application allows users to generate a README file for their projects by providing input to a series of questions.
 
-Screenshots:
+## Screenshots:
 
 <video controls src="Funcionality Video.mp4" title="Title"></video>
 
 
 
-Table of Contents
+## Table of Contents
 
 
-Installation
+# Installation
 
-Usage
+# Usage
 
-License
+# License
 
-Contributions
+# Contributions
 
-Tests
+# Tests
 
-Questions
+# Questions
 
 
-Installation
+## Installation
 
 
 Clone the repository to your local machine.
@@ -34,7 +34,7 @@ Clone the repository to your local machine.
 Install the required dependencies by running npm install.
 
 
-Usage
+## Usage
 
 To generate a README file:
 
@@ -47,18 +47,18 @@ Answer the prompted questions about your project.
 Once all questions are answered, the README file will be generated in the same directory.
 
 
-License
+## License
 
 This project is licensed under the No License.
 
 
-Contributions
+## Contributions
 
 Rahul Sharma 
 
 
 
-Fork the repository.
+## Fork the repository.
 
 Create a new branch for your feature.
 
@@ -69,15 +69,14 @@ Push your changes to your branch.
 Submit a pull request.
 
 
-Tests
+## Tests
 
 To test the application, you can run the provided test cases.
 
 
-Questions
+## Questions
 
 If you have any questions or need further assistance, feel free to reach out:
-
 
 
 GitHub: YourGitHubUsername
